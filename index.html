@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Amazin Cyber helps small businesses identify Microsoft 365, email, identity, and phishing risks with a plain-English security report and prioritized recommendations." />
+  <title>Amazin Cyber — Microsoft 365 Security Snapshot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" fill="currentColor"/>
+          <path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Amazin Cyber
+      </a>
+
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu" role="list">
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#process">Process</a></li>
+        <li><a class="nav-link" href="#faq">FAQ</a></li>
+        <li><a class="nav-link nav-cta" href="#contact">Request a Snapshot</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════
+         HERO
+    ══════════════════════════════════════ -->
+    <section id="hero" class="hero">
+      <div class="container hero-inner fade-in">
+        <div class="hero-badge">Microsoft 365 Security Review</div>
+        <h1 class="hero-headline">
+          A Practical Microsoft 365 Security Checkup for Small Businesses
+        </h1>
+        <p class="hero-sub">
+          I help small businesses identify common Microsoft 365, email, identity, and phishing risks — then provide a plain-English report with prioritized recommendations.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary btn-lg">Request a Security Snapshot</a>
+          <a href="#services" class="btn btn-ghost btn-lg">See What's Included</a>
+        </div>
+      </div>
+      <div class="hero-bg-graphic" aria-hidden="true"></div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PROBLEM
+    ══════════════════════════════════════ -->
+    <section id="problem" class="section section-light">
+      <div class="container fade-in">
+        <h2 class="section-title">Most Small Businesses Don't Know What's Missing</h2>
+        <p class="section-intro">
+          Microsoft 365 gives you a lot of powerful tools out of the box — but the default settings aren't always the safest ones. Many small businesses are using it every day without knowing whether key protections are turned on.
+        </p>
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M8 11V7a4 4 0 018 0v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>MFA and Sign-In Risk</h3>
+            <p>Multi-factor authentication is one of the most effective protections against account takeover — but it's not always enabled for every account, or configured in the most secure way.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 8l9-5 9 5v8l-9 5-9-5V8z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M12 3v18M3 8l9 5 9-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Email Security Gaps</h3>
+            <p>Email authentication records like SPF, DKIM, and DMARC help prevent phishing and spoofing. Many small businesses don't have them set up correctly — or at all.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M18 11l2 2 3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Admin Accounts and Permissions</h3>
+            <p>Overly permissive admin accounts are a common target. If an admin account is compromised, the damage can go far beyond one person's inbox.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 4h16v16H4z" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M9 9h6M9 12h6M9 15h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M4 4l16 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Hidden Mailbox Rules</h3>
+            <p>After an account compromise, attackers sometimes set up forwarding rules or inbox filters to quietly intercept mail. These are easy to miss if you're not looking for them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SERVICES — WHAT'S INCLUDED
+    ══════════════════════════════════════ -->
+    <section id="services" class="section section-dark">
+      <div class="container fade-in">
+        <div class="services-header">
+          <span class="section-label">The Service</span>
+          <h2 class="section-title light">Microsoft 365 Security Snapshot</h2>
+          <p class="section-intro light">
+            A structured review of your Microsoft 365 environment focused on the areas most likely to be exploited. You'll receive a clear, written report — not a spreadsheet of jargon.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#60a5fa" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <strong>MFA and Sign-In Risk Review</strong>
+              <p>Check which accounts have multi-factor authentication enabled, review Conditional Access policies, and identify accounts with risky sign-in history.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#60a5fa" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <strong>Admin Account and Role Review</strong>
+              <p>Review which accounts hold admin or privileged roles, identify accounts that should have reduced permissions, and flag accounts where best practices aren't being followed.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#60a5fa" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <strong>Mailbox Forwarding and Inbox Rule Review</strong>
+              <p>Identify any forwarding rules or auto-redirect filters — especially ones that may indicate a previous or current compromise.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#60a5fa" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <strong>Email Security and Phishing Protection Review</strong>
+              <p>Review SPF, DKIM, and DMARC records along with Microsoft Defender for Office 365 anti-phishing and anti-spoofing settings.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#60a5fa" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <strong>Defender and Security Baseline Review</strong>
+              <p>Check Microsoft Secure Score, Defender configuration, and compare your environment against common security baseline recommendations.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#60a5fa" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <strong>Plain-English Findings Report</strong>
+              <p>A written summary of what was reviewed, what was found, and what it means for your business — written for owners and managers, not IT teams.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#60a5fa" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <strong>Prioritized Recommendations</strong>
+              <p>Findings are ranked by impact so you know what to address first. No long lists of things that don't apply to your situation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-cta">
+          <a href="#contact" class="btn btn-primary">Request a Security Snapshot</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PRICING
+    ══════════════════════════════════════ -->
+    <section id="pricing" class="section section-light">
+      <div class="container fade-in">
+        <span class="section-label dark">Pricing</span>
+        <h2 class="section-title">Straightforward Packages</h2>
+        <p class="section-intro">
+          All packages include a written findings report. Choose the depth that fits your situation.
+        </p>
+
+        <div class="pricing-grid">
+
+          <!-- Starter -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-name">Starter Snapshot</h3>
+              <div class="pricing-price"><span class="price-amount">$250</span></div>
+              <p class="pricing-tagline">Basic Microsoft 365 security review and written summary</p>
+            </div>
+            <ul class="pricing-features" role="list">
+              <li>MFA coverage check</li>
+              <li>Admin role overview</li>
+              <li>Email authentication check (SPF, DKIM, DMARC)</li>
+              <li>Basic mailbox rule review</li>
+              <li>Written summary report</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline">Get Started</a>
+          </div>
+
+          <!-- Business — Recommended -->
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3 class="pricing-name">Business Snapshot</h3>
+              <div class="pricing-price"><span class="price-amount">$500</span></div>
+              <p class="pricing-tagline">Deeper review with plain-English report and prioritized recommendations</p>
+            </div>
+            <ul class="pricing-features" role="list">
+              <li>Everything in Starter</li>
+              <li>Sign-in risk and Conditional Access review</li>
+              <li>Defender and security baseline review</li>
+              <li>Suspicious inbox rule and forwarding review</li>
+              <li>Detailed findings report</li>
+              <li>Prioritized recommendations with context</li>
+              <li>Brief debrief call to walk through findings</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Get Started</a>
+          </div>
+
+          <!-- Remediation -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-name">Remediation Support</h3>
+              <div class="pricing-price">
+                <span class="price-prefix">Starting at </span>
+                <span class="price-amount">$1,000</span>
+              </div>
+              <p class="pricing-tagline">Review plus hands-on help fixing approved items</p>
+            </div>
+            <ul class="pricing-features" role="list">
+              <li>Everything in Business Snapshot</li>
+              <li>Hands-on remediation of approved findings</li>
+              <li>Configuration assistance in your environment</li>
+              <li>Documentation of changes made</li>
+              <li>Final validation check</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline">Get Started</a>
+          </div>
+
+        </div>
+
+        <p class="pricing-note">
+          Pricing is for small business environments. Larger or more complex environments may be quoted separately. All work is scoped and approved before it begins.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         ABOUT / WHY WORK WITH ME
+    ══════════════════════════════════════ -->
+    <section id="about" class="section section-mid">
+      <div class="container fade-in">
+        <div class="about-inner">
+          <div class="about-text">
+            <span class="section-label dark">About</span>
+            <h2 class="section-title">Why Work With Me</h2>
+            <p>
+              I'm Oshé, a hands-on cybersecurity administrator — not a large firm, not a sales team. When you work with me, you're working with someone who actually does this work.
+            </p>
+            <p>Based in Houston, serving small businesses locally and remotely.</p>
+            <p>
+              My background covers Microsoft 365, identity and access management, email security, phishing defense, endpoint security, vulnerability management, and incident response. I work with the same tools that enterprise security teams use, applied in a way that makes sense for smaller organizations.
+            </p>
+            <p>
+              My goal is to give you an honest, clear picture of where you stand — and practical steps you can actually take. No scare tactics, no upselling things you don't need.
+            </p>
+
+            <ul class="about-highlights" role="list">
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Hands-on Microsoft 365 and Entra ID (Azure AD) experience
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Email security, phishing defense, and incident response experience
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Plain-English communication for business owners and non-technical staff
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Practical recommendations — not a long list of things that don't apply to you
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Endpoint security and vulnerability management background
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-card" aria-hidden="true">
+            <div class="about-shield">
+              <svg viewBox="0 0 80 90" fill="none">
+                <path d="M40 4L6 19v22c0 22.1 14.5 42.7 34 48.3C59.5 83.7 74 63.1 74 41V19L40 4z" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+                <path d="M28 43l9 9 16-16" stroke="#60a5fa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="about-card-text">
+              <p>Security reviews designed for small businesses</p>
+              <p>Plain English. No jargon. Practical next steps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PROCESS
+    ══════════════════════════════════════ -->
+    <section id="process" class="section section-light">
+      <div class="container fade-in">
+        <span class="section-label dark">How It Works</span>
+        <h2 class="section-title">A Simple, Transparent Process</h2>
+        <p class="section-intro">
+          From the initial conversation to your final report, here's what to expect.
+        </p>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number" aria-hidden="true">1</div>
+            <div class="step-content">
+              <h3>Schedule a Quick Call</h3>
+              <p>We'll spend about 20 minutes on the phone going over your environment, what you're concerned about, and what package makes sense for your situation.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number" aria-hidden="true">2</div>
+            <div class="step-content">
+              <h3>Complete a Secure Intake</h3>
+              <p>You'll fill out a short intake form with basic information about your Microsoft 365 setup. Any access needed will be discussed and agreed upon before we begin.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number" aria-hidden="true">3</div>
+            <div class="step-content">
+              <h3>Review Your Environment</h3>
+              <p>I'll review your Microsoft 365 configuration according to the scope of your package. This typically takes 1–2 business days once access is in place.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number" aria-hidden="true">4</div>
+            <div class="step-content">
+              <h3>Receive Your Findings Report</h3>
+              <p>You'll receive a written report covering what was reviewed, what was found, and what to prioritize. Written for business owners, not IT teams.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number" aria-hidden="true">5</div>
+            <div class="step-content">
+              <h3>Optional: Remediation Support</h3>
+              <p>If you want help addressing specific findings, we can discuss remediation support. All work is scoped and approved before anything is changed in your environment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         FAQ
+    ══════════════════════════════════════ -->
+    <section id="faq" class="section section-mid">
+      <div class="container fade-in">
+        <span class="section-label dark">FAQ</span>
+        <h2 class="section-title">Common Questions</h2>
+
+        <div class="faq-list" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false">
+              Do you need admin access to my Microsoft 365 account?
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>It depends on the depth of the review. Some parts of the assessment can be completed with read-only or delegated access. If elevated access is needed, we'll discuss it before the engagement begins. Any access granted should be temporary, scoped to what's needed for the review, and revoked once the work is complete. You'll always know what access was requested and why.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false">
+              How long does the review take?
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Most reviews are completed within 3–5 business days from the time access is in place and the intake is complete. Turnaround may vary depending on the complexity of your environment and current schedule. You'll get an estimated completion date before we begin.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false">
+              Is this a penetration test?
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>No. This is a configuration and security posture review — not a penetration test. I'm looking at how your Microsoft 365 environment is set up and comparing it against known best practices and common risk areas. No exploitation or active attack simulation is involved. If you need a formal penetration test, I can point you toward appropriate resources.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false">
+              Can you help fix the issues after the review?
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Yes. If you'd like help addressing specific findings, Remediation Support is available as an add-on or through the Remediation Support package. All remediation work is scoped, approved by you, and documented. Nothing is changed in your environment without your explicit sign-off.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false">
+              Is this only for Microsoft 365 businesses?
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Yes, the Security Snapshot is designed specifically for organizations using Microsoft 365 (formerly Office 365). If you use Google Workspace or another platform and want to talk about your security options, reach out — I'm happy to have a conversation and point you in the right direction.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         FINAL CTA + CONTACT FORM
+    ══════════════════════════════════════ -->
+    <section id="contact" class="section section-dark">
+      <div class="container fade-in">
+        <div class="contact-inner">
+          <div class="contact-text">
+            <span class="section-label">Get Started</span>
+            <h2 class="section-title light">Request a Security Snapshot</h2>
+            <p class="section-intro light">
+              Fill out the form and I'll follow up within 1–2 business days to schedule a brief call. No commitment required.
+            </p>
+            <ul class="contact-details" role="list">
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#60a5fa" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Response within 1–2 business days
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#60a5fa" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                No sales pressure
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#60a5fa" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                All work scoped and approved before it begins
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#60a5fa" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Prefer email? <a href="mailto:amazincybersolutions@gmail.com" class="contact-email-link">amazincybersolutions@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xjglgrdw" method="POST" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name <span class="required" aria-hidden="true">*</span></label>
+                  <input type="text" id="name" name="name" autocomplete="name" required placeholder="Jane Smith" />
+                </div>
+                <div class="form-group">
+                  <label for="company">Company / Organization <span class="required" aria-hidden="true">*</span></label>
+                  <input type="text" id="company" name="company" autocomplete="organization" required placeholder="Acme Dental" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" autocomplete="email" required placeholder="jane@acmedental.com" />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="package">Package of Interest</label>
+                <select id="package" name="package">
+                  <option value="">— Not sure yet —</option>
+                  <option value="starter">Starter Snapshot — $250</option>
+                  <option value="business">Business Snapshot — $500</option>
+                  <option value="remediation">Remediation Support — Starting at $1,000</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Anything you'd like me to know?</label>
+                <textarea id="message" name="message" rows="4" placeholder="How many users, any specific concerns, current situation, etc."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Send Request</button>
+            </form>
+
+            <div id="form-success" class="form-success" hidden role="status" aria-live="polite">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <circle cx="24" cy="24" r="22" stroke="#22c55e" stroke-width="2.5"/>
+                <path d="M14 24l8 8 13-14" stroke="#22c55e" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3>Request Received</h3>
+              <p>Thanks — your request has been received. I'll follow up soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo footer-logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" fill="currentColor"/>
+            <path d="M9 12l2 2 4-4" stroke="#0a1628" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Amazin Cyber
+        </a>
+        <p>Microsoft 365 security reviews for small businesses.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="footer-disclaimer">Security reviews reduce risk but do not guarantee complete protection against all threats.</p>
+        <p class="footer-copy">&copy; <span id="footer-year"></span> Amazin Cyber. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
