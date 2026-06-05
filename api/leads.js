@@ -20,6 +20,37 @@ function clientIp(req) {
   return req.socket?.remoteAddress || 'unknown';
 }
 
+const FROM_EMAIL = 'Amazin Cyber <support@amazincyber.com>';
+const NOTIFY_EMAIL = 'oshe@amazincyber.com';
+
+// Send a plain-text email via Resend. Throws on failure (callers swallow it
+// so a failed email never blocks the lead from being saved).
+async function sendEmail({ to, subject, text, replyTo }) {
+  const RESEND_KEY = process.env.RESEND_API_KEY;
+  if (!RESEND_KEY) {
+    console.log(`[email skipped — no RESEND_API_KEY] to=${to} subject=${subject}`);
+    return;
+  }
+  const resp = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${RESEND_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from: FROM_EMAIL,
+      to: Array.isArray(to) ? to : [to],
+      ...(replyTo ? { reply_to: replyTo } : {}),
+      subject,
+      text,
+    }),
+  });
+  if (!resp.ok) {
+    const err = await resp.json().catch(() => ({}));
+    throw new Error(err?.message || `Resend error ${resp.status}`);
+  }
+}
+
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -77,6 +108,50 @@ module.exports = async (req, res) => {
       const detail = await resp.text();
       console.error('Supabase insert failed:', resp.status, detail);
       return res.status(502).json({ ok: false, error: 'Could not save submission.' });
+    }
+
+    // Lead saved. Fire confirmation + internal notification emails.
+    // A failed email must NOT block the success response.
+    const confirmationText = `Hi ${name},
+
+Thanks for reaching out. I received your request and will follow up within 1-2 business days to schedule a brief call.
+
+In the meantime, if you have any questions you can reply to this email.
+
+— Oshé
+Founder, Amazin Cyber
+amazincyber.com`;
+
+    const notificationText = `New lead submitted via amazincyber.com
+
+Name: ${lead.name}
+Company: ${lead.company || '—'}
+Email: ${lead.email}
+Phone: ${lead.phone || '—'}
+Package: ${lead.package || '—'}
+Message: ${lead.message || '—'}
+Source: ${lead.source}
+Status: ${lead.status}`;
+
+    try {
+      await sendEmail({
+        to: email,
+        subject: 'We received your request — Amazin Cyber',
+        text: confirmationText,
+      });
+    } catch (e) {
+      console.error('Confirmation email failed (lead still saved):', e);
+    }
+
+    try {
+      await sendEmail({
+        to: NOTIFY_EMAIL,
+        subject: `New lead: ${name} — ${lead.company || 'No company'}`,
+        text: notificationText,
+        replyTo: email,
+      });
+    } catch (e) {
+      console.error('Notification email failed (lead still saved):', e);
     }
 
     return res.status(200).json({ ok: true });
