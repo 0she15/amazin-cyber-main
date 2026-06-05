@@ -100,6 +100,7 @@
   /* ── Contact form submission ─────────────────────────────── */
   const form        = document.getElementById('contact-form');
   const successMsg  = document.getElementById('form-success');
+  const errorMsg    = document.getElementById('form-error');
 
   if (form && successMsg) {
     form.addEventListener('submit', function (e) {
@@ -134,28 +135,49 @@
         return;
       }
 
-      // Submit to Formspree
+      // Submit to /api/leads (writes to Supabase leads table)
       const submitBtn = form.querySelector('[type="submit"]');
       submitBtn.disabled = true;
+      if (errorMsg) errorMsg.hidden = true;
 
-      fetch(form.action, {
+      var showError = function (msg) {
+        submitBtn.disabled = false;
+        if (errorMsg) {
+          errorMsg.textContent = msg;
+          errorMsg.hidden = false;
+          errorMsg.focus();
+        } else {
+          alert(msg);
+        }
+      };
+
+      var payload = {
+        name:    form.querySelector('#name').value.trim(),
+        company: form.querySelector('#company').value.trim(),
+        email:   form.querySelector('#email').value.trim(),
+        phone:   form.querySelector('#phone').value.trim(),
+        package: form.querySelector('#package').value,
+        message: form.querySelector('#message').value.trim(),
+      };
+
+      fetch('/api/leads', {
         method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload),
       })
         .then(function (res) {
           if (res.ok) {
             form.hidden = true;
             successMsg.hidden = false;
             successMsg.focus();
+          } else if (res.status === 429) {
+            showError('Too many submissions from your network. Please try again later or email amazincybersolutions@gmail.com directly.');
           } else {
-            submitBtn.disabled = false;
-            alert('Something went wrong. Please email amazincybersolutions@gmail.com directly.');
+            showError('Something went wrong. Please email amazincybersolutions@gmail.com directly.');
           }
         })
         .catch(function () {
-          submitBtn.disabled = false;
-          alert('Network error. Please email amazincybersolutions@gmail.com directly.');
+          showError('Network error. Please email amazincybersolutions@gmail.com directly.');
         });
     });
 

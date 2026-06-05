@@ -514,7 +514,7 @@
           </div>
 
           <div class="contact-form-wrap">
-            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xjglgrdw" method="POST" novalidate>
+            <form id="contact-form" class="contact-form" action="/api/leads" method="POST" novalidate>
               <div class="form-row">
                 <div class="form-group">
                   <label for="name">Full Name <span class="required" aria-hidden="true">*</span></label>
@@ -549,6 +549,7 @@
                 <textarea id="message" name="message" rows="4" placeholder="How many users, any specific concerns, current situation, etc."></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-block">Send Request</button>
+              <p id="form-error" class="form-error" hidden tabindex="-1" role="alert" aria-live="assertive"></p>
             </form>
 
             <div id="form-success" class="form-success" hidden role="status" aria-live="polite">

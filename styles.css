@@ -811,6 +811,16 @@ button:focus-visible {
   font-size: 0.9rem;
   color: var(--color-text-dim);
 }
+.form-error {
+  margin-top: 0.85rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: #fecaca;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  border-radius: 8px;
+  outline: none;
+}
 
 /* ── Footer ──────────────────────────────────────────────── */
 .site-footer {
