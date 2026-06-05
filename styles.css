@@ -3,6 +3,10 @@
    Edit CSS variables in :root to change colors and fonts.
    ============================================================ */
 
+/* The hidden attribute must always win over component display rules
+   (e.g. .contact-form / .form-success use display:flex). */
+[hidden] { display: none !important; }
+
 /* ── Variables ───────────────────────────────────────────── */
 :root {
   /* Colors */

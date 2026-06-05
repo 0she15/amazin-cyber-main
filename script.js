@@ -167,8 +167,10 @@
       })
         .then(function (res) {
           if (res.ok) {
-            form.hidden = true;
-            successMsg.hidden = false;
+            form.reset();                       // clear all fields
+            if (errorMsg) errorMsg.hidden = true;
+            form.hidden = true;                 // hide the form
+            successMsg.hidden = false;          // reveal confirmation
             successMsg.focus();
           } else if (res.status === 429) {
             showError('Too many submissions from your network. Please try again later or email amazincybersolutions@gmail.com directly.');
